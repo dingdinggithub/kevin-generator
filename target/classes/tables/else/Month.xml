@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entity SYSTEM "../dtd/table.dtd">
+<!--
+name:类名称,首字母大写
+package:包名,方面后面的扩展(eg：com.zs.xybb.domian)
+description：（类的中文名称）页面中用到
+author：类的开发作者（注释会用到）
+version:类的开发版本
+ -->
+<entity name="MonthReport" table="r_month" description="月报表" author="刘德帅" since="1.0">
+	<!-- 
+		主键
+	 -->
+	<id name="id" column="id" type="string" description="主键"/>
+	<!-- 
+		name:表示属性名称
+		type：属性类型,int | long | string | date |decimal选择其中一个
+		description:描述,生成注释需要，页面内容
+	 -->
+	
+<property name="reportName"    column="report_name"      type="string"     maxlength="255"  description="报表名称"   />
+<property name="escalationPeople"     column="escalation_people"       type="string"     maxlength="255"    description="提报人"    />
+<property name="reviewer"         column="reviewer"           type="string"     maxlength="255"  description="审核人"/>
+<property name="startDate"      column="start_date"        type="date"                       description="起始日期"  dateFmt="yyyy-MM-dd" />
+<property name="endDate"    column="end_date"      type="date"   description="截止日期"  dateFmt="yyyy-MM-dd" />
+<property name="period"          column="period"             type="string"    maxlength="255" description="报送周期"     />
+<property name="summary"          column="summary"             type="string"    maxlength="255" description="综述"     />
+<property name="processConditions"       column="process_conditions"         type="string"    maxlength="255"  description="电阻片过程情况"     />
+<property name="inputTime"       column="input_time"         type="date"                      description="录入时间"   dateFmt="yyyy-MM-dd HH:mm:ss"  />
+<property name="inputUser"       column="input_user"         type="string"    maxlength="255"  description="录入人"     />
+	
+</entity>

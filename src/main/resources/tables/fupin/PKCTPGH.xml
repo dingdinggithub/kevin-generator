@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>                                          
+<!DOCTYPE entity SYSTEM "../../dtd/table.dtd">
+<entity name="pkctpgh" table="pkctpgh" description="贫困村脱贫规划" author="niuxin" since="1.0">
+<id name="QHDM" column="QHDM" type="string" description="村区划代码"/>   
+	<property name="TBND" column="TBND" type="string" maxlength="4" description="填报年度"/> 
+	<property name="XQMC" column="QHMC" type="string" maxlength="20" description="贫困村名称" />
+ 	<property name="JHND" column="JHND" type="string" maxlength="4" description="计划年度" />
+ 	
+ 	<property name="JHTPHS"    column="JHTPHS"      type="int"    description="计划脱贫户数"/>
+ 	<property name="JHTPRKS"   column="JHTPRKS"      type="int"    description="计划脱贫人口数"   />
+ 	<property name="FZSCZZHS"    column="FZSC_ZZHS"      type="int"    description="发展生产_种植户数"   />
+ 	<property name="FZSCZZRKS"   column="FZSC_ZZRKS"      type="int"    description="发展生产_种植人口数"   />
+ 	<property name="FZSCYZHS"   column="FZSC_YZHS"      type="int"    description="发展生产_养殖户数"   />
+ 	<property name="FZSCYZRKS"   column="FZSC_YZRKS"      type="int"    description="发展生产_养殖人口数"   />
+ 	<property name="FZSCJGHS"    column="FZSC_JGHS"      type="int"    description="发展生产_加工户数"   />
+ 	<property name="FZSCJGRKS"   column="FZSC_JGRKS"      type="int"    description="发展生产_加工人口数"   />
+ 	<property name="FZSCSFHS"    column="FZSC_SFHS"      type="int"    description="发展生产_商服户数"   />
+ 	<property name="FZSCSFRKS"   column="FZSC_SFRKS"      type="int"    description="发展生产_商服人口数"   />
+ 	<property name="FZSCQTHS"      column="FZSC_QTHS"      type="int"    description="发展生产_其他户数"   />
+ 	<property name="FZSCQTRKS"     column="FZSC_QTRKS"      type="int"    description="发展生产_其他人口数"   />
+ 	<property name="YDBQHS"     column="YDBQ_HS"      type="int"    description="易地搬迁_户数"   />
+ 	<property name="YDBQRKS"     column="YDBQ_RKS"      type="int"    description="易地搬迁_人口数"   />
+ 	<property name="FZJYHS"      column="FZJY_HS"      type="int"    description="发展教育_户数"   />
+ 	<property name="FZJYRKS"     column="FZJY_RKS"      type="int"    description="发展教育_人口数"   />
+ 	<property name="STBCHS"     column="STBC_HS"      type="int"    description="生态补偿_户数"   />
+ 	<property name="STBCRKS"     column="STBC_RKS"      type="int"    description="生态补偿_人口数"   />
+ 	<property name="SBDDHS"    column="SBDD_HS"      type="int"    description="社会兜底_户数"/>
+ 	<property name="SBDDRKS"   column="SBDD_RKS"      type="int"    description="社会兜底_人口数"   />
+</entity>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entity SYSTEM "../dtd/table.dtd">
+<!--
+name:类名称,首字母大写
+package:包名,方面后面的扩展(eg：com.zs.xybb.domian)
+description：（类的中文名称）页面中用到
+author：类的开发作者（注释会用到）
+version:类的开发版本
+ -->
+<entity name="Equipment" table="p_equipment" description="设备维修记录表" author="赵付录" since="1.0">
+	<!-- 
+		主键
+	 -->
+	<id name="id" column="id" type="string" description="主键"/>
+	<!-- 
+		name:表示属性名称
+		type：属性类型,int | long | string | date |decimal选择其中一个
+		description:描述,生成注释需要，页面内容
+	 -->
+	
+<property name="resistanceChipNum" column="resistance_chip_num"  type="string"     maxlength="50"  description="电阻片批号"   />
+<property name="process"             column="process"              type="int"          description="工序"         />
+<property name="equName"            column="equ_name"             type="string"     maxlength="30"  description="设备名称"     />
+<property name="breakDate"          column="break_date"           type="date"          description="故障时间"    dateFmt="yyyy-MM-dd HH:mm:ss"  />
+<property name="repairStartDate"   column="repair_start_date"    type="date"         description="维修开始时间"  dateFmt="yyyy-MM-dd HH:mm:ss" />
+<property name="repairEndDate"     column="repair_end_date"      type="date"          description="维修完成时间"  dateFmt="yyyy-MM-dd HH:mm:ss" />
+<property name="repairStaff"        column="repair_staff"         type="string"     maxlength="30"  description="维修人员"     />
+<property name="breakDescri"        column="break_descri"         type="string"    maxlength="250"  description="故障描述"     />
+<property name="repairMethod"       column="repair_method"        type="string"    maxlength="100"  description="维修方法"     />
+<property name="repairResult"       column="repair_result"        type="string"    maxlength="100"  description="维修效果"     />
+<property name="repairMoney"        column="repair_money"         type="decimal"     description="维修费用"     />
+<property name="staffSign"          column="staff_sign"           type="string"     maxlength="30"  description="操作工人名"   />
+<property name="leaderSign"         column="leader_sign"          type="string"     maxlength="30"  description="工段长人名"   />
+<property name="inputUser"          column="input_user"           type="string"     maxlength="30"  description="信息录入者"   />
+<property name="inputTime"          column="input_time"           type="date"       description="系统录入时间"  dateFmt="yyyy-MM-dd HH:mm:ss" />
+	
+</entity>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entity SYSTEM "../dtd/table.dtd">
+<!--
+name:类名称,首字母大写
+package:包名,方面后面的扩展(eg：com.zs.xybb.domian)
+description：（类的中文名称）页面中用到
+author：类的开发作者（注释会用到）
+version:类的开发版本
+ -->
+<entity name="WeekReportDetail" table="r_week_detail" description="周报表电阻片" author="任春辉" since="1.0">
+	<!-- 
+		主键
+	 -->
+	<id name="id" column="id" type="string" description="主键"/>
+	<!-- 
+		name:表示属性名称
+		type：属性类型,int | long | string | date |decimal选择其中一个
+		description:描述,生成注释需要，页面内容
+	 -->
+
+<property name="weekreportId" column="weekreport_id" type="string" maxlength="50"  description="周报ID"                       />
+<property name="specifNo" column="specif_no" type="string" maxlength="50"  description="电阻片型号"                   />
+<property name="batchInspection" column="batch_inspection" type="int"   description="送检批次"                     />
+<property name="onceThroughBatch" column="once_through_batch" type="int"   description="1次通过批次"                  />
+<property name="degradedBatch" column="degraded_batch" type="int"   description="降级批次"                     />
+<property name="batchPassRate" column="batch_pass_rate" type="decimal"  description="批次合格率"                   />
+<property name="lastweekCompared" column="lastweek_compared" type="string" maxlength="255"  description="上周相比"                     />
+<property name="unqualifiedDesc" column="unqualified_desc" type="string" maxlength="255"  description="主要不合格说明及对应措施"     />
+<property name="inputTime" column="input_time" type="date"  description="登记时间"    dateFmt="yyyy-MM-dd"                 />
+<property name="inputUser" column="input_user" type="string" maxlength="50"  description="登记人"                       />
+     
+</entity>      
+               
+               
+               
+               
+               
+               
+               
+               

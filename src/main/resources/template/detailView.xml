@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+	<name>entity</name>
+	<filePath>${projectPath}/src/main/webapp/WEB-INF/jsps/${ClassName?uncap_first}</filePath>
+	<fileName>${ClassName?uncap_first}Detail.jsp</fileName>
+	<content><![CDATA[<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/resources/inc/taglib.jsp"%>
+
+<div class="pageContent">
+	<div class="pageFormContent" layoutH="56">
+		<input name="${id.name}" type="text" hidden value="${"$"}{${ClassName?uncap_first}.id}"/>
+		<#list filedList as filed>
+		<p>
+		<label>${filed.description}：</label>
+		<#if filed.javaType != "Date">
+		<input name="${filed.name}" type="text" disabled="disabled" size="30" <#if filed.javaType == "String">maxlength="${filed.maxlength}"</#if> value="${"$"}{${ClassName?uncap_first}.${filed.name}}" class="required" />
+		</#if>
+		<#if filed.javaType == "Date">
+		<input name="${filed.name}" disabled="disabled" type="text" value="<fmt:formatDate value="${"$"}{${ClassName?uncap_first}.${filed.name}}" pattern="${filed.dateFmt}"/>" class="date" dateFmt="${filed.dateFmt}" readonly="true"/>
+		</#if>
+		</p>
+		</#list>
+	</div>
+</div>
+]]>
+	</content>
+</template>

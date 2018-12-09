@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+	<name>entity</name>
+	<filePath>${projectPath}/src/main/webapp/WEB-INF/jsps/${ClassName?uncap_first}</filePath>
+	<fileName>add${ClassName?cap_first}.jsp</fileName>
+	<content><![CDATA[<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/resources/inc/taglib.jsp" %>
+
+<div class="pageContent">
+	<form method="post" action="${"$"}{path}/${ClassName?uncap_first}/add" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone);">
+		<div class="pageFormContent" layoutH="56">
+			<#list filedList as filed>
+			<p>
+				<label>${filed.description}：</label>
+				<#if filed.javaType != "Date">
+					<input name="${filed.name}" type="text" size="30" <#if filed.javaType == "String">maxlength="${filed.maxlength}"</#if> value="" class="required"/>
+				</#if>
+				<#if filed.javaType == "Date">
+				<input name="${filed.name}" type="text" size="30" value="" class="date" dateFmt="${filed.dateFmt}" readonly="true"/>
+				<a class="inputDateButton" href="javascript:;">选择</a>
+				</#if>
+			</p>
+			</#list>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li>
+					<div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div>
+				</li>
+			</ul>
+		</div>
+	</form>
+</div>
+]]>
+	</content>
+</template>

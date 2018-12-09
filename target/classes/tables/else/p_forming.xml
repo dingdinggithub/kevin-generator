@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entity SYSTEM "../dtd/table.dtd">
+<!--
+name:类名称,首字母大写
+package:包名,方面后面的扩展(eg：com.zs.xybb.domian)
+description：（类的中文名称）页面中用到
+author：类的开发作者（注释会用到）
+version:类的开发版本
+ -->
+<entity name="Forming" table="p_forming" description="成型数据统计" author="赵付录" since="1.0">
+	<!-- 
+		主键
+	 -->
+	<id name="id" column="id" type="string" description="主键"/>
+	<!-- 
+		name:表示属性名称
+		type：属性类型,int | long | string | date |decimal选择其中一个
+		description:描述,生成注释需要，页面内容
+	 -->                                     
+<property name="resistChipNo" column="resist_chip_no" type="string" maxlength="50" description="电阻片批号" />                                       
+<property name="specifNo" column="specif_no" type="string" maxlength="50" description="规格型号" />                                       
+<property name="prillingNo" column="prilling_no" type="string" maxlength="50" description="造粒料批号" />                                       
+<property name="prillingWeight" column="prilling_weight" type="decimal" description="造粒料重量/kg" />                                       
+<property name="suppressNo" column="suppress_no" type="int" description="压制数量/片" />                                       
+<property name="inclWaterRate" column="incl_water_rate" type="decimal" description="含水率/%" />                                       
+<property name="inclWaterTime" column="incl_water_time" type="decimal" description="含水后时间/h" />                                       
+<property name="temperEnviron" column="temper_environ" type="decimal" description="环境温度/℃" />                                       
+<property name="temperHumidity" column="temper_humidity" type="decimal" description="环境湿度/%" />                                       
+<property name="temperCavityTemp" column="temper_cavity_temp" type="decimal" description="成型前模腔温度" />                                       
+<property name="formingDate" column="forming_date" type="date" description="年/月/日" dateFmt="yyyy-MM-dd HH:mm:ss" />                                       
+<property name="formingDura" column="forming_dura" type="string" maxlength="20" description="时间段" />                                       
+<property name="formingOptor" column="forming_optor" type="string" maxlength="30" description="操作者" />                                       
+<property name="formingDevid" column="forming_devid" type="string" maxlength="50" description="设备编号" />                                       
+<property name="formingProgid" column="forming_progid" type="string" maxlength="50" description="压制程序编号" />                                       
+<property name="formingPressure" column="forming_pressure" type="decimal" description="成型压力/Mpa" />                                       
+<property name="formingDensity" column="forming_density" type="decimal" description="成型密度g/cm3" />                                       
+<property name="formingQualQuan" column="forming_qual_quan" type="int" description="合格数量/片" />                                       
+<property name="formingUnqualRate" column="forming_unqual_rate" type="decimal" description="合格率" />                                       
+<property name="formingUnqualOver" column="forming_unqual_over" type="int" description="高度超标" />                                       
+<property name="formingUnqualBag" column="forming_unqual_bag" type="int" description="鼓包" />                                       
+<property name="formingUnqualTier" column="forming_unqual_tier" type="int" description="分层" />                                       
+<property name="formingUnqualExc" column="forming_unqual_exc" type="int" description="压机异常" />                                       
+<property name="formingUnqualOther" column="forming_unqual_other" type="int" description="其它" />                                       
+<property name="formingUnqualExplain" column="forming_unqual_explain" type="string" maxlength="250" description="不合格情况说明" />                                       
+<property name="formingDesc" column="forming_desc" type="int" description="设备状态描述" />                                       
+<property name="inputTime" column="input_time" type="date" description="录入时间，系统计入" dateFmt="yyyy-MM-dd HH:mm:ss" />
+	
+	
+</entity>

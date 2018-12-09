@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entity SYSTEM "../dtd/table.dtd">
+<!--
+name:类名称,首字母大写
+package:包名,方面后面的扩展(eg：com.zs.xybb.domian)
+description：（类的中文名称）页面中用到
+author：类的开发作者（注释会用到）
+version:类的开发版本
+ -->
+<entity name="User" table="sys_users" description="用户" author="余进" since="1.0">
+	<!-- 
+		主键
+	 -->
+	<id name="id" column="id" type="string" description="主键"/>
+	<!-- 
+		name:表示属性名称
+		type：属性类型,int | long | string | date 选择其中一个
+		description:描述,生成注释需要，页面内容
+	 -->
+	<property name="name" column="name" type="string" description="用户名称"/>
+	<property name="username" column="username" type="string" description="用户名"/>
+	<property name="password" column="password" type="string" description="用户密码"/>
+	<property name="createTime" column="create_time" type="string" description="添加时间"/>
+	<property name="status" column="status" type="int" description="用户状态"/>
+</entity>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+	<name>entity</name>
+	<filePath>${projectPath}/src/main/java/${packageName?replace(".","/")}/service/impl</filePath>
+	<fileName>${ClassName?cap_first}ServiceImpl.java</fileName>
+	<content><![CDATA[package ${packageName}.service.impl;
+
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import ${packageName}.common.PageRequest;
+import ${packageName}.domain.entity.${ClassName?cap_first};
+import ${packageName}.domain.mapper.${ClassName?cap_first}Mapper;
+import ${packageName}.service.${ClassName?cap_first}Service;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections.CollectionUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+/**
+ * ${functionName}ServiceImpl
+ * @author ${functionAuthor}
+ * @date ${functionDate}
+ */
+@Service
+@Slf4j
+public class ${ClassName?cap_first}ServiceImpl implements ${ClassName?cap_first}Service{
+
+	@Autowired
+    private ${ClassName?cap_first}Mapper ${ClassName?uncap_first}Mapper;
+
+    @Override
+    public int deleteById(${id.javaType} ${id.name}) {
+        return ${ClassName?uncap_first}Mapper.deleteById(${id.name});
+    }
+
+    @Override
+    public void batchDelete(List<Long> idList) {
+        ${ClassName?uncap_first}Mapper.batchDelete(idList);
+    }
+
+    @Override
+    public int insert(${ClassName?cap_first} record) {
+        record.setCreateTime(LocalDateTime.now());
+        return ${ClassName?uncap_first}Mapper.insert(record);
+    }
+
+    @Override
+    public void batchInsert(List<${ClassName?cap_first}> recordList) {
+
+        if (CollectionUtils.isEmpty(recordList)) {
+            return ;
+        }
+
+        recordList.forEach(record-> {
+            record.setCreateTime(LocalDateTime.now());
+            record.setUpdateTime(LocalDateTime.now());
+            ${ClassName?uncap_first}Mapper.insert(record);
+        });
+    }
+
+    @Override
+    public ${ClassName?cap_first} selectByCode(${id.javaType} ${id.name}) {
+        return ${ClassName?uncap_first}Mapper.selectById(${id.name});
+    }
+
+    @Override
+    public int updateById(${ClassName?cap_first} record) {
+        record.setUpdateTime(LocalDateTime.now());
+        return ${ClassName?uncap_first}Mapper.updateById(record);
+    }
+
+    @Override
+    public void batchUpdate(List<${ClassName?cap_first}> recordList) {
+
+        if (CollectionUtils.isEmpty(recordList)) {
+            return ;
+        }
+
+        recordList.forEach(record-> {
+            record.setUpdateTime(LocalDateTime.now());
+            ${ClassName?uncap_first}Mapper.updateById(record);
+        });
+    }
+
+    @Override
+    public Page<${ClassName?cap_first}> queryPage(PageRequest<${ClassName?cap_first}> record) {
+        PageHelper.startPage(record.getPageIndex(), record.getPageSize());
+        return ${ClassName?uncap_first}Mapper.queryPage(record.getModel());
+    }
+
+    @Override
+    public List<${ClassName?cap_first}> queryAll(${ClassName?cap_first} record) {
+        return ${ClassName?uncap_first}Mapper.queryPage(record);
+    }
+
+}]]>
+	</content>
+</template>

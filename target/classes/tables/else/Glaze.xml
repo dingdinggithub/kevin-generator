@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entity SYSTEM "../dtd/table.dtd">
+<!--
+name:类名称,首字母大写
+package:包名,方面后面的扩展(eg：com.zs.xybb.domian)
+description：（类的中文名称）页面中用到
+author：类的开发作者（注释会用到）
+version:类的开发版本
+ -->
+<entity name="Glaze" table="m_glaze" description="釉料" author="李胜涛" since="1.0">
+	<!-- 
+		主键
+	 -->
+	<id name="id" column="id" type="string" description="主键"/>
+	<!-- 
+		name:表示属性名称
+		type：属性类型,int | long | string | date |decimal选择其中一个
+		description:描述,生成注释需要，页面内容
+	 -->
+	 
+<property name="supplyFatury"    column="supply_fatury"    type="string"    maxlength="80"  description="供应厂商 "   />
+<property name="batchNumber"     column="batch_number"     type="string"    maxlength="64"  description="本批批号 "  />
+<property name="checkNo"         column="check_no"         type="string"    maxlength="64"  description="检验单号"     />
+<property name="batchWeight"     column="batch_weight"     type="decimal"                   description="本批重量 " />
+<property name="dateArrial"      column="date_arrial"      type="date"                      description="到货日期 "  dateFmt="yyyy-MM-dd" />
+<property name="dateAnalysis"    column="date_analysis"    type="date"                      description="分析日期 "  dateFmt="yyyy-MM-dd" />
+<property name="conclusion"      column="conclusion"       type="int"                       description="结论 "     />
+<property name="remark"          column="remark"           type="string"    maxlength="255" description="备注"     />
+<property name="inputUser"       column="input_user"       type="string"    maxlength="50"  description="登记人"     />
+<property name="inputTime"       column="input_time"       type="date"                      description="登记时间"    dateFmt="yyyy-MM-dd HH:mm:ss" />
+
+</entity>

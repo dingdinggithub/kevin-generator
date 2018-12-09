@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+	<name>entity</name>
+	<filePath>${projectPath}/src/main/java/${packageName?replace(".","/")}/business</filePath>
+	<fileName>${ClassName?cap_first}Business.java</fileName>
+	<content><![CDATA[package ${packageName}.business;
+
+import com.kevin.common.domain.response.BaseResponse;
+import com.kevin.common.domain.response.PageQueryResponse;
+import ${packageName}.common.PageRequest;
+import ${packageName}.dto.request.${ClassName?uncap_first}.*;
+import ${packageName}.dto.response.${ClassName?uncap_first}.${ClassName?cap_first}PageResDTO;
+
+import java.util.List;
+/**
+ * ${functionName}Business
+ * @author ${functionAuthor}
+ * @date ${functionDate}
+ */
+public interface ${ClassName?cap_first}Business {
+
+    BaseResponse insert${ClassName?cap_first}(${ClassName?cap_first}InsertReqDTO ${ClassName?uncap_first});
+
+    BaseResponse batchInsert${ClassName?cap_first}(${ClassName?cap_first}BatchInsertReqDTO reqDTO);
+
+    BaseResponse update${ClassName?cap_first}(${ClassName?cap_first}UpdateReqDTO ${ClassName?uncap_first});
+
+    BaseResponse batchUpdate${ClassName?cap_first}(${ClassName?cap_first}BatchUpdateReqDTO reqDTO);
+
+    BaseResponse delete${ClassName?cap_first}(${id.javaType} ${id.name});
+
+    BaseResponse batchDelete${ClassName?cap_first}(${ClassName?cap_first}BatchDeleteReqDTO reqDTO);
+
+    BaseResponse query${ClassName?cap_first}(${id.javaType} ${id.name});
+
+    PageQueryResponse<${ClassName?cap_first}PageResDTO> queryPage(PageRequest<${ClassName?cap_first}PageReqDTO> pageRequest);
+
+    BaseResponse<List<${ClassName?cap_first}PageResDTO>> queryAll(${ClassName?cap_first}PageReqDTO reqDTO);
+
+}]]>
+	</content>
+</template>

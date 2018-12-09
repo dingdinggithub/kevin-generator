@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>                                          
+<!DOCTYPE entity SYSTEM "../../dtd/table.dtd">                                                                                                              
+<entity name="jsgzl" table="jsgzl" description="教师工作量" author="牛鑫" since="1.0">
+	<!--                                                                          
+		主键                                                                        
+	 -->                                                                          
+	<id name="ID" column="ID" type="string" description="主键"/>                  
+  <property name="JSXM" column="JSXM" type="string" maxlength="10" description="教师姓名" />
+  <property name="JSGH" column="JSGH" type="string" maxlength="20" description="教师工号" />
+  <property name="KCMC" column="KCMC" type="string" maxlength="30" description="教授课程名称" />
+  <property name="JSBJ" column="JSBJ" type="string" maxlength="30" description="授课班级" />
+  <property name="JXJHGDXS" column="JXJHGDXS" type="int" description="教学计划规定学时" />
+  <property name="KCLBXS" column="KCLBXS" type="decimal" maxlength="10" description="课程类别系数" />
+  <property name="SKBJRS" column="SKBJRS" type="int"  description="授课班级人数" />
+  <property name="SKBJRSXS" column="SKBJRSXS" type="decimal" maxlength="10" description="授课班级人数系数" />
+  <property name="LLJXGZL" column="LLJXGZL" type="decimal" maxlength="10" description="理论教学工作量" />
+  <property name="ZTJZ" column="ZTJZ" type="int"  description="专题讲座" />
+  <property name="JKGZL" column="JKGZL" type="int"  description="监考工作量" />
+  <property name="FQMKSKH" column="FQMKSKH" type="decimal" maxlength="10" description="非期末考试考核" />
+  <property name="ZDPYFA" column="ZDPYFA" type="decimal" maxlength="10" description="制定培养方案" />
+  <property name="ZDFBLLW" column="ZDFBLLW" type="decimal" maxlength="10" description="指导发表论文" />
+  <property name="TKBT" column="TKBT" type="decimal" maxlength="10" description="听课补贴" />
+  <property name="QTJXHD" column="QTJXHD" type="decimal" maxlength="10" description="其他教学活动" />
+  <property name="FJGZJXL" column="FJGZJXL" type="decimal" maxlength="10" description="附加工作教学量" />
+  <property name="KCSJZS" column="KCSJZS" type="int"  description="课程设计周数" />
+  <property name="KCSJRSXS" column="KCSJRSXS" type="decimal" maxlength="10" description="课程设计人数系数" />
+  <property name="KCSJZDGZL" column="KCSJZDGZL" type="decimal" maxlength="10" description="课程设计指导工作量" />
+  <property name="SXZS" column="SXZS" type="int"  description="实习周数" />
+  <property name="SXRSXS" column="SXRSXS" type="decimal" maxlength="10" description="实习人数系数" />
+  <property name="XWFSSXGZL" column="XWFSSXGZL" type="decimal" maxlength="10"  description="校外分散实习工作量" />
+  <property name="BYSJRS" column="BYSJRS" type="int" description="毕业设计人数" />
+  <property name="BYSJZS" column="BYSJZS" type="int"  description="毕业设计周数" />
+  <property name="BYSJCGLBXS" column="BYSJCGLBXS" type="decimal" maxlength="10"  description="毕业设计成功类别系数" />
+  <property name="BYSJZDGZL" column="BYSJZDGZL" type="decimal" maxlength="10" description="毕业设计知道工作量" />
+  <property name="GZLXNXQ" column="GZL_XNXQ" type="string" maxlength="50" description="工作量学年学期" />
+  </entity>

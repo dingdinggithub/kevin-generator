@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>                                          
+<!DOCTYPE entity SYSTEM "../../dtd/table.dtd">                                                                                                              
+<entity name="jsxx" table="jsxx" description="教师信息表" author="牛鑫" since="1.0">
+	<!--                                                                          
+		主键                                                                        
+	 -->                                                                          
+	<id name="JSGH"  column="JSGH"  type="string"  description="主键"/> 
+	<property name="JSDLMM"  column="JSDLMM"  type="string"  maxlength="20"  description="教师登陆密码" />                 
+  <property name="DW"  column="DW"  type="string"  maxlength="10"  description="单位" />
+  <property name="JSXM"  column="JSXM"  type="string"  maxlength="10"  description="教师姓名" />
+  <property name="XB"  column="XB"  type="string"  maxlength="2"  description="性别" />
+  <property name="CSRQ"  column="CSRQ"  type="date"  maxlength="0"  description="出生日期" dateFmt="yyyy-MM-dd HH:mm:ss" />
+  <property name="ZZMM"  column="ZZMM"  type="string"  maxlength="10"  description="政治面貌" />
+  <property name="MZ"  column="MZ"  type="string"  maxlength="10"  description="民族" />
+  <property name="SFZH"  column="SFZH"  type="string"  maxlength="20"  description="身份证号" />
+  <property name="ZW"  column="ZW"  type="string"  maxlength="10"  description="职务" />
+  <property name="XGW"  column="XGW"  type="string"  maxlength="10"  description="现岗位" />
+  <property name="SFJYJSZG"  column="SFJYJSZG"  type="string"  maxlength="2"  description="是否具有教师资格" />
+  <property name="ZCPDSJ"  column="ZCPDSJ"  type="string"  maxlength="10"  description="职称评定时间" />
+  <property name="DYXL"  column="DYXL"  type="string"  maxlength="10"  description="第一学历" />
+  <property name="DYXLBYYX"  column="DYXL_BYYX"  type="string"  maxlength="20"  description="第一学历毕业院校" />
+  <property name="DYXLZY"  column="DYXL_ZY"  type="string"  maxlength="30"  description="第一学历专业" />
+  <property name="DYXLBYSJ"  column="DYXL_BYSJ"  type="string"  maxlength="20"  description="第一学历毕业时间" />
+  <property name="ZGXLBYYX"  column="ZGXL_BYYX"  type="string"  maxlength="20"  description="最高学历毕业院校" />
+  <property name="ZGXL"  column="ZGXL"  type="string"  maxlength="10"  description="最高学历" />
+  <property name="ZGXLZY"  column="ZGXL_ZY"  type="string"  maxlength="20"  description="最高学历专业" />
+  <property name="ZGXLBYSJ"  column="ZGXL_BYSJ"  type="string"  maxlength="20"  description="最高学历毕业时间" />
+  <property name="SJH"  column="SJH"  type="string"  maxlength="20"  description="手机号" />
+  <property name="EMAIL"  column="EMAIL"  type="string"  maxlength="20"  description="教室email" />
+  <property name="BGDH"  column="BGDH"  type="string"  maxlength="20"  description="办公电话" />
+  </entity>

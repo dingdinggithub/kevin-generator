@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+	<name>entity</name>
+	<filePath>${projectPath}/src/main/java/${packageName?replace(".","/")}/domain/mapper</filePath>
+	<fileName>${ClassName?cap_first}Mapper.java</fileName>
+	<content><![CDATA[package ${packageName}.domain.mapper;
+import ${packageName}.domain.entity.*;
+import java.time.LocalDateTime;
+
+/**
+ * ${functionName}Mapper
+ * @author ${functionAuthor}
+ * @date ${functionDate}
+ */
+public interface ${ClassName?cap_first}Mapper extends BaseMapper<${ClassName?cap_first}>{
+
+}]]>
+	</content>
+</template>

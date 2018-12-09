@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entity SYSTEM "../dtd/table.dtd">
+<!--
+name:类名称,首字母大写
+package:包名,方面后面的扩展(eg：com.zs.xybb.domian)
+description：（类的中文名称）页面中用到
+author：类的开发作者（注释会用到）
+version:类的开发版本
+ -->
+<entity name="FinishedProduct" table="p_finished_product" description="成型数据统计" author="刘伟伟" since="1.0">
+	<!-- 
+		主键
+	 -->
+	<id name="id" column="id" type="string" description="主键"/>
+	<!-- 
+		name:表示属性名称
+		type：属性类型,int | long | string | date |decimal选择其中一个
+		description:描述,生成注释需要，页面内容
+	 -->                                                        
+<property name="pressureGrade" column="pressure_grade" type="int" description="电压等级" />
+<property name="resistanceNo" column="resistance_no" type="string" maxlength="50" description="电阻片批号" />
+<property name="specification" column="specification" type="string" maxlength="50" description="规格型号" />
+<property name="no" column="no" type="string" maxlength="50" description="编号" />
+<property name="formingNo" column="forming_no" type="int" description="成型片数/片" />
+<property name="storageNo" column="storage_no" type="int" description="入库片数/片" />
+<property name="processRate" column="process_rate" type="decimal" description="全过程合格率/%" />
+<property name="environTempe" column="environ_tempe" type="decimal" description="环境温度/℃" />
+<property name="environHumi" column="environ_humi" type="decimal" description="环境湿度/%" />
+<property name="environTime" column="environ_time" type="date" description="环境测试时间" />
+<property name="environOperator" column="environ_operator" type="string" maxlength="50" description="环境操作者" />
+<property name="capacitor" column="capacitor" type="decimal" description="电容/PF" />
+<property name="u1ma" column="u1ma" type="decimal" description="U1mA/kv" />
+<property name="ilma" column="ilma" type="decimal" description="IL1mA/uA" />
+<property name="u2ma" column="u2ma" type="decimal" description="U2mA/kv" />
+<property name="il2ma" column="il2ma" type="decimal" description="IL2mA/uA" />
+<property name="lightningAmpli" column="lightning_ampli" type="decimal" description="雷电8/20us电流幅值/KA" />
+<property name="lightningPressure" column="lightning_pressure" type="decimal" description="雷电8/20us残压/KV" />
+<property name="lightningRatio" column="lightning_ratio" type="decimal" description="雷电8/20us压比" />
+<property name="operatingAmpl" column="operating_ampl" type="int" description="操作30/60us电流幅值/KA" />
+<property name="operationPressure" column="operation_pressure" type="decimal" description="操作30/60us残压/KV" />
+<property name="operatingRatio" column="operating_ratio" type="decimal" description="操作30/60us压比" />
+<property name="swaveAmplitude1" column="swave_amplitude1" type="int" description="方波 电流幅值/A" />
+<property name="voltageU1ma" column="voltage_u1ma" type="decimal" description="电压U1mA/KV" />
+<property name="voltageU2ma" column="voltage_u2ma" type="decimal" description="电压U2mA/KV" />
+<property name="swaveNo" column="swave_no" type="int" description="18次方波耐受 数量" />
+<property name="swaveBreakdown1" column="swave_breakdown1" type="string" maxlength="255" description="18次方波耐受 异常描述侧击穿" />
+<property name="swaveSide" column="swave_side" type="string" maxlength="255" description="18次方波耐受 异常描述 侧闪" />
+<property name="swaveInner" column="swave_inner" type="string" maxlength="255" description="18次方波耐受 异常描述内环闪" />
+<property name="swaveBreakdown2" column="swave_breakdown2" type="string" maxlength="255" description="18次方波耐受 异常描述端面击穿" />
+<property name="swaveBurst" column="swave_burst" type="string" maxlength="255" description="18次方波耐受 异常描述炸裂" />
+<property name="swaveChangerate" column="swave_changerate" type="decimal" description="18次方波耐受 电压变化率/%" />
+<property name="swaveAmplitude2" column="swave_amplitude2" type="decimal" description="18次方波耐受 残压 电流幅值/A" />
+<property name="swaveUres" column="swave_ures" type="decimal" description="18次方波耐受 残压URes/KV" />
+<property name="swaveResidual" column="swave_residual" type="decimal" description="18次方波耐受 残压 变化率/%" />
+<property name="itAmplitude" column="it_amplitude" type="decimal" description="大冲击耐受 冲击 电流幅值/A" />
+<property name="itNo" column="it_no" type="int" description="大冲击耐受 数量" />
+<property name="itBre" column="it_bre" type="string" maxlength="255" description="大冲击耐受 异常描述 侧击穿" />
+<property name="itFlash" column="it_flash" type="string" maxlength="255" description="大冲击耐受 异常描述 侧闪" />
+<property name="itInner" column="it_inner" type="string" maxlength="255" description="大冲击耐受 异常描述 内环闪" />
+<property name="itFace" column="it_face" type="string" maxlength="255" description="大冲击耐受 异常描述 端面击穿" />
+<property name="itBurst" column="it_burst" type="string" maxlength="255" description="大冲击耐受 异常描述 炸裂" />
+<property name="itU1ma" column="it_u1ma" type="decimal" description="大冲击耐受 电压U1mA/KV" />
+<property name="itU2ma" column="it_u2ma" type="decimal" description="大冲击耐受 电压U2mA/KV" />
+<property name="itChange" column="it_change" type="decimal" description="大冲击耐受 电压 变化率/%" />
+<property name="itRca" column="it_rca" type="decimal" description="大冲击耐受 残压 电流幅值/A" />
+<property name="itResidual_ures" column="it_residual_ures" type="decimal" description="大冲击耐受 残压URes/KV" />
+<property name="itResidual" column="it_residual" type="decimal" description="大冲击耐受 残压 变化率/%" />
+<property name="remarks" column="remarks" type="string" maxlength="255" description="备注" />
+<property name="inputTime" column="input_time" type="date" description="录入时间，系统计入" />
+	
+	
+</entity>

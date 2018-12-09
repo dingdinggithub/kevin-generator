@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>                                          
+<!DOCTYPE entity SYSTEM "../../dtd/table.dtd">
+<entity name="jtryxx" table="jtryxx" description="学院集体荣誉信息表" author="牛鑫" since="1.0">
+	<!--                                                                          
+		主键                                                                        
+	 -->                                                                          
+	<id name="id" column="id" type="string" description="主键"/>
+<property	name="BZMC"  		 column="BZMC" type="string"  maxlength="50" description="表彰名称"   />
+<property	name="HJBM"  		 column="HJBM" type="string"  maxlength="20"     description="获奖部门"   />
+<property	name="BJBM"      		 column="BJBM" type="string"  maxlength="20"   description="颁奖部门"     />
+<property	name="HJJB"     		 column="HJJB" type="string"  maxlength="20"   description="获奖级别"     />
+<property	name="HJRQ"      		 column="HJRQ" type="date"  maxlength="0"  description="获奖日期" dateFmt="yyyy-MM-dd"      />
+<property	name="HJXNXQ"  		 column="HJXNXQ" type="string"  maxlength="50"  description="荣誉获得学年学期"    />
+</entity>        

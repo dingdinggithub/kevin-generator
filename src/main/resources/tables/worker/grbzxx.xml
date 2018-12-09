@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>                                          
+<!DOCTYPE entity SYSTEM "../../dtd/table.dtd">
+<entity name="grbzxx" table="grbzxx" description="个人表彰信息表" author="牛鑫" since="1.0">
+	<!--                                                                          
+		主键                                                                        
+	 -->                                                                          
+	<id name="id" column="id" type="string" description="主键"/>
+<property	name="JSGH"  		 column="JSGH" type="string"  maxlength="50" description="教师工号"   />
+<property	name="BZRYXM"  		 column="BZRYXM" type="string"  maxlength="20"     description="表彰人员姓名"   />
+<property	name="BZMC"      		 column="BZMC" type="string"  maxlength="20"   description="表彰名称"     />
+<property	name="BZBM"     		 column="BZBM" type="string"  maxlength="30"   description="表彰部门"     />
+<property	name="BZJB"      		 column="BZJB" type="string"  maxlength="10"   description="表彰级别"      />
+<property	name="BZRQ"  		 column="BZRQ" type="date"  maxlength="0"  description="表彰日期" dateFmt="yyyy-MM-dd"    />
+<property	name="BZXNXQ"  		 column="BZXNXQ" type="string"  maxlength="50"  description="表彰学年学期"    />
+</entity>        

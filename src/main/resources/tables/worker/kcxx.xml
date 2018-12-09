@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>                                          
+<!DOCTYPE entity SYSTEM "../../dtd/table.dtd">
+<entity name="kcxx" table="kcxx" description="课程信息表" author="牛鑫" since="1.0">
+	<!--                                                                          
+		主键                                                                        
+	 -->                                                                          
+	<id name="ID" column="ID" type="string" description="主键"/>
+<property	name="KCDM"  		 column="KCDM" type="string"  maxlength="25" description="课程代码"   />
+<property	name="KCMC"  		 column="KCMC" type="string"  maxlength="25"     description="课程名称"   />
+<property	name="KCXZ"      		 column="KCXZ" type="string"  maxlength="10"   description="课程性质"     />
+<property	name="KCKSQK"     		 column="KCKSQK" type="string"  maxlength="10"   description="课程开设情况"     />
+<property	name="SXBJ"      		 column="SXBJ" type="string"  maxlength="50"   description="所学班级"      />
+<property	name="XXNJ"  		 column="XXNJ" type="string"   maxlength="10" description="学习年级"     />
+<property	name="RKJS"  		 column="RKJS" type="string"  maxlength="10"   description="任课教师"     />
+<property	name="KCSKZS"  		 column="KCSKZS" type="string"  maxlength="50"  description="课程授课周数"    />
+<property	name="MZKS"  		 column="MZKS" type="string"  maxlength="10"     description="每周课时"   />
+<property	name="MZKSFP"      		 column="MZKSFP" type="string"  maxlength="50"   description="每周课时分配"      />
+<property	name="ZYSYS"  		 column="ZYSYS" type="string"   maxlength="50" description="专业实验室"     />
+<property	name="ZKS"  		 column="ZKS" type="string"  maxlength="10"   description="总课时"     />
+<property	name="SFHB"  		 column="SFHB" type="string"  maxlength="2"  description="是否合班"    />
+<property	name="KCXNXQ"  		 column="KCXNXQ" type="string"  maxlength="50"     description="课程学年学期"   />
+<property	name="SFFZ"      		 column="SFFZ" type="string"  maxlength="2"   description="是否分组"      />
+<property	name="SFLK"  		 column="SFLK" type="string"   maxlength="2" description="是否联课"     />
+<property	name="WPJSSUDW"  		 column="WPJS_SUDW" type="string"  maxlength="50"   description="外聘教师所属单位"     />
+<property	name="WPJSLXFS"  		 column="WPJS_LXFS" type="string"  maxlength="50"  description="外聘教师联系方式"    />
+<property	name="PKYQ"  		 column="PKYQ" type="string"  maxlength="50"     description="排课要求"   />
+
+</entity>        

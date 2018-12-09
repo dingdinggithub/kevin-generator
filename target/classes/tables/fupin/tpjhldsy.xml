@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>                                          
+<!DOCTYPE entity SYSTEM "../../dtd/table.dtd">                                     
+<!--                                                                            
+name:类名称,首字母大写                                                          
+package:包名,方面后面的扩展(eg：com.zs.xybb.domian)                             
+description：（类的中文名称）页面中用到                                         
+author：类的开发作者（注释会用到）                                              
+version:类的开发版本                                                            
+ -->                                                                            
+<entity name="tpjhldsy" table="tpjhldsy" description="脱贫计划年度收益表" author="孙强强" since="1.0">
+	<!--                                                                          
+		主键                                                                        
+	 -->                                                                          
+	<id name="id" column="id" type="string" description="主键"/>                  
+	<!--                                                                          
+		name:表示属性名称                                                           
+		type：属性类型,int | long | string | date |decimal选择其中一个              
+		description:描述,生成注释需要，页面内容                                     
+	 -->
+	<property name="JTBH" column="JTBH" type="string" maxlength="50" description="家庭编号" /> 
+	<property name="TPLD" column="TPLD" type="string" maxlength="50" description="脱贫年度" /> 
+	<property name="ZZLNSY" column="ZZLNSY" type="string" maxlength="50" description="种植类年收益" /> 
+	<property name="YZLNSY" column="YZLNSY" type="string" maxlength="50" description="养殖类年收益" /> 
+	<property name="JGLNSY" column="JGLNSY" type="string" maxlength="50" description="加工类年收益" /> 
+	<property name="SYLNSY" column="SYLNSY" type="string" maxlength="50" description="商业类年收益" /> 
+	<property name="QTLNSY" column="QTLNSY" type="string" maxlength="50" description="其他类年收益" /> 
+	<property name="NDZSHJ" column="NDZSHJ" type="string" maxlength="50" description="年度增收合计" /> 
+	<property name="inputTime" column="input_time" type="date" maxlength="0" description="录入时间" dateFmt="yyyy-MM-dd HH:mm:ss"/> 
+	<property name="inputUser" column="input_user" type="string" maxlength="255" description="录入人" /> 
+
+	
+	
+	
+	
+	</entity> 

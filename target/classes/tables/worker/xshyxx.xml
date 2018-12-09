@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>                                          
+<!DOCTYPE entity SYSTEM "../../dtd/table.dtd">
+<entity name="xshyxx" table="xshyxx" description="学术会议信息" author="牛鑫" since="1.0">
+	<!--                                                                          
+		主键                                                                        
+	 -->                                                                          
+	<id name="id" column="id" type="string" description="主键"/>
+<property	name="HYNR"  		 column="HYNR" type="string"  maxlength="50" description="会议内容"   />
+<property	name="ZBDW"  		 column="ZBDW" type="string"  maxlength="20"     description="举办单位"   />
+<property	name="HYJB"      		 column="HYJB" type="string"  maxlength="10"   description="会议级别"     />
+<property	name="HYSJ"  		 column="HYSJ" type="date"  maxlength="0"  description="会议时间" dateFmt="yyyy-MM-dd"    />
+<property	name="HYDD"     		 column="HYDD" type="string"  maxlength="20"   description="会议地点"     />
+<property	name="CHRY"      		 column="CHRY" type="string"  maxlength="100"   description="参会人员"      />
+<property	name="CHRS"  		 column="CHRS" type="int"  description="参会人数"    />
+<property	name="HYJF"      		 column="HYJF" type="string"  maxlength="10"   description="会议经费"      />
+<property	name="HYXNXQ"  		 column="HYXNXQ" type="string"  maxlength="50"  description="学年学期"    />
+</entity>        

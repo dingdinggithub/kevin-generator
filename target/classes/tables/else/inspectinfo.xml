@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entity SYSTEM "../dtd/table.dtd">
+<!--
+name:类名称,首字母大写
+package:包名,方面后面的扩展(eg：com.zs.xybb.domian)
+description：（类的中文名称）页面中用到
+author：类的开发作者（注释会用到）
+version:类的开发版本
+ -->
+<entity name="InspectInfo" table="inspect_info" description="企业巡查信息" author="侯艳松" since="1.0">
+	<!-- 
+		主键
+	 -->
+	<id name="id" column="id" type="int" description="主键"/>
+	<!-- 
+		name:表示属性名称
+		type：属性类型,int | long | string | date 选择其中一个
+		description:描述,生成注释需要，页面内容
+	 -->
+	<property name="examinee" column="examinee" type="string" description="被检查人"/>
+	<property name="legalPerson" column="legal_person" type="string" description="企业法人"/>
+	<property name="businessAddress" column="business_address" type="string" description="经营地址"/>
+	<property name="registerNo" column="register_no" type="date" description="注册号	"/>
+	<property name="licenseNo" column="license_no" type="string" description="许可证号"/>
+	<property name="businessScope" column="business_scope" type="string" description="经营范围"/>
+	<property name="inspectAddress" column="inspect_address" type="string" description="巡检地址"/>
+	<property name="inspectRecord" column="inspect_record" type="string" description="监督检查记录"/>
+	<property name="inspectType" column="inspect_type" type="int" description="检查类别"/>
+	<property name="inspector" column="inspector" type="string" description="巡检人员"/>
+	<property name="fieldCondition" column="field_condition" type="string" description="现场情况"/>
+	<property name="educationContent" column="education_content" type="string" description="法律宣传教育内容"/>
+	<property name="handleSituation" column="handle_situation" type="string" description="处理情况"/>
+	<property name="scenePhotos" column="scene_photos" type="string" description="现场照片"/>
+	<property name="enterPrisename" column="enterprisename" type="string" description="企业名称"/>
+	<property name="inspectInfo" column="inspect_info" type="string" description="企业巡查信息"/>
+	<property name="escortUnit" column="escort_unit" type="string" description="单位陪同人员"/>
+	<property name="mainProblem" column="main_problem" type="string" description="主要问题"/>
+	<property name="equipmentType" column="equipment_type" type="string" description="特种设备类别"/>
+	<property name="equipmentNumber" column="equipment_number" type="string" description="设备类别数量"/>
+	<property name="mainInfo" column="main_info" type="string" description="检查主要内容"/>
+	<property name="measures" column="measures" type="int" description="处理措施"/>
+	<property name="inspectConclusion" column="inspect_conclusion" type="string" description="检查结论"/>
+	<property name="checkPoints" column="check_points" type="string" description="药品经营企业检查项"/>
+	<property name="remark" column="remark" type="string" description="备注"/>
+	<property name="checkResult" column="check_result" type="int" description="检查结果"/>
+	<property name="checkContents" column="check_contents" type="string" description="检查内容"/>
+</entity>

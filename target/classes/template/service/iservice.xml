@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+	<name>entity</name>
+	<filePath>${projectPath}/src/main/java/${packageName?replace(".","/")}/service</filePath>
+	<fileName>${ClassName?cap_first}Service.java</fileName>
+	<content><![CDATA[package ${packageName}.service;
+
+import ${packageName}.domain.entity.*;
+/**
+ * ${functionName}Service
+ * @author ${functionAuthor}
+ * @date ${functionDate}
+ */
+public interface ${ClassName?cap_first}Service extends BaseService<${ClassName?cap_first}>{
+	
+}]]>
+	</content>
+</template>

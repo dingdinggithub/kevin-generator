@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+	<name>entity</name>
+	<filePath>${projectPath}/src/main/java/${packageName?replace(".","/")}/controller</filePath>
+	<fileName>${ClassName?cap_first}Controller.java</fileName>
+	<content><![CDATA[package ${packageName}.controller;
+import com.kevin.common.domain.response.BaseResponse;
+import com.kevin.common.domain.response.PageQueryResponse;
+import ${packageName}.business.${ClassName?cap_first}Business;
+import ${packageName}.common.PageRequest;
+import ${packageName}.common.log.OperatorLog;
+import ${packageName}.dto.request.${ClassName?uncap_first}.*;
+import ${packageName}.dto.response.${ClassName?uncap_first}.${ClassName?cap_first}PageResDTO;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import com.kevin.mem.mng.dto.ResultResponse;
+import lombok.extern.slf4j.Slf4j;
+import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.constraints.NotNull;
+import java.util.List;
+
+@RestController
+@Slf4j
+@Api(description = "管理接口")
+@RequestMapping("/${ClassName?uncap_first}")
+public class ${ClassName?cap_first}Controller extends BaseController {
+
+    @Autowired
+    private ${ClassName?cap_first}Business ${ClassName?uncap_first}Business;
+
+    @ApiOperation("插入接口")
+    @PostMapping("/insert${ClassName?cap_first}")
+    @OperatorLog(description = "/insert${ClassName?cap_first}")
+    public BaseResponse insert${ClassName?cap_first}(@RequestBody @Validated ${ClassName?cap_first}InsertReqDTO reqDTO, @RequestHeader(required = false) @NotBlank(message = "用户名不能为空") String userName){
+        return ${ClassName?uncap_first}Business.insert${ClassName?cap_first}(reqDTO);
+    }
+
+    @ApiOperation("批量插入接口")
+    @PostMapping("/batchInsert${ClassName?cap_first}")
+    @OperatorLog(description = "/batchInsert${ClassName?cap_first}")
+    public BaseResponse batchInsert${ClassName?cap_first}(@RequestBody @Validated ${ClassName?cap_first}BatchInsertReqDTO reqDTO, @RequestHeader(required = false) @NotBlank(message = "用户名不能为空") String userName){
+
+        return ${ClassName?uncap_first}Business.batchInsert${ClassName?cap_first}(reqDTO);
+    }
+
+    @ApiOperation("更新接口")
+    @PostMapping("/update${ClassName?cap_first}")
+    @OperatorLog(description = "/update${ClassName?cap_first}")
+    public BaseResponse update${ClassName?cap_first}(@RequestBody @Validated ${ClassName?cap_first}UpdateReqDTO reqDTO, @RequestHeader(required = false) @NotBlank(message = "用户名不能为空") String userName){
+        return ${ClassName?uncap_first}Business.update${ClassName?cap_first}(reqDTO);
+    }
+
+    @ApiOperation("批量更新接口")
+    @PostMapping("/batchUpdate${ClassName?cap_first}")
+    @OperatorLog(description = "/batchUpdate${ClassName?cap_first}")
+    public BaseResponse batchUpdate${ClassName?cap_first}(@RequestBody @Validated ${ClassName?cap_first}BatchUpdateReqDTO reqDTO, @RequestHeader(required = false) @NotBlank(message = "用户名不能为空") String userName){
+
+        return ${ClassName?uncap_first}Business.batchUpdate${ClassName?cap_first}(reqDTO);
+    }
+
+    @ApiOperation("刪除接口")
+    @GetMapping("/delete${ClassName?cap_first}")
+    @OperatorLog(description = "/delete${ClassName?cap_first}")
+    public BaseResponse delete${ClassName?cap_first}(${id.javaType} ${id.name}, @RequestHeader(required = false) @NotBlank(message = "用户名不能为空") String userName){
+        return ${ClassName?uncap_first}Business.delete${ClassName?cap_first}(${id.name});
+    }
+
+    @ApiOperation("批量刪除接口")
+    @PostMapping("/batchDelete${ClassName?cap_first}")
+    @OperatorLog(description = "/batchDelete${ClassName?cap_first}")
+    public BaseResponse batchDelete${ClassName?cap_first}(@RequestBody @Validated ${ClassName?cap_first}BatchDeleteReqDTO reqDTO, @RequestHeader(required = false) @NotBlank(message = "用户名不能为空") String userName){
+        return ${ClassName?uncap_first}Business.batchDelete${ClassName?cap_first}(reqDTO);
+    }
+
+    @ApiOperation("根据id查询接口")
+    @GetMapping("/query${ClassName?cap_first}")
+    @OperatorLog(description = "/query${ClassName?cap_first}")
+    public BaseResponse query${ClassName?cap_first}(${id.javaType} ${id.name}){
+        return ${ClassName?uncap_first}Business.query${ClassName?cap_first}(${id.name});
+    }
+
+    @ApiOperation("分页查询接口")
+    @PostMapping("/queryPage")
+    @OperatorLog(description = "/queryPage")
+    public PageQueryResponse<${ClassName?cap_first}PageResDTO> queryPage(@RequestBody @Validated PageRequest<${ClassName?cap_first}PageReqDTO> pageRequest){
+        return ${ClassName?uncap_first}Business.queryPage(pageRequest);
+    }
+
+    @ApiOperation("根据条件查询所有接口")
+    @PostMapping("/queryAll")
+    @OperatorLog(description = "/queryAll")
+    public BaseResponse<List<${ClassName?cap_first}PageResDTO>> queryAll(@RequestBody @Validated ${ClassName?cap_first}PageReqDTO reqDTO){
+        return ${ClassName?uncap_first}Business.queryAll(reqDTO);
+    }
+
+}]]>
+	</content>
+</template>
