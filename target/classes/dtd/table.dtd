@@ -1,6 +1,0 @@
-<!ELEMENT entity (id,property+)>
-	<!ELEMENT id (#PCDATA)>
-	<!ELEMENT property (#PCDATA)>
-	<!ATTLIST entity name CDATA #REQUIRED table CDATA #REQUIRED description CDATA #REQUIRED author CDATA #REQUIRED since CDATA #REQUIRED>
-	<!ATTLIST id name CDATA #REQUIRED type ( int | long | string | date ) "string" description  CDATA #REQUIRED column CDATA #REQUIRED>
-	<!ATTLIST property name CDATA #REQUIRED type ( int | long | string | date | decimal) "string" description  CDATA #REQUIRED column CDATA #REQUIRED maxlength CDATA #IMPLIED dateFmt CDATA #IMPLIED>

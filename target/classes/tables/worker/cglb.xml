@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>                                          
-<!DOCTYPE entity SYSTEM "../../dtd/table.dtd">
-<entity name="cglb" table="cglb" description="成果类别表" author="牛鑫" since="1.0">
-	<!--                                                                          
-		主键                                                                        
-	 -->                                                                          
-	<id name="CID" column="CID" type="int" description="主键"/>
-<property	name="CNAME"   column="CNAME" type="string"  maxlength="20"   description="成果类别名称"  />
-</entity>

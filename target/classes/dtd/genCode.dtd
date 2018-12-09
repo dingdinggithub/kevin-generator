@@ -1,4 +1,0 @@
-<!ELEMENT project (table+)>
-	<!ELEMENT table (#PCDATA)>
-	<!ATTLIST project name CDATA #REQUIRED basepackage CDATA #REQUIRED path CDATA #REQUIRED>
-	<!ATTLIST table src CDATA #REQUIRED>

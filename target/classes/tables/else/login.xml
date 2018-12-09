@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>                                          
-<!DOCTYPE entity SYSTEM "../dtd/table.dtd">
-<entity name="login" table="login" description="用户表" author="niuxin" since="1.0">
-<id name="id" column="id" type="string" description="主键"/> 
-<property name="user"    column="user"      type="string"     maxlength="10"  description="用户名"   />
-<property name="password"    column="password"      type="string"     maxlength="10"  description="用户密码"   />
-<property name="email"    column="email"      type="string"   maxlength="100" description="用户邮箱"   />
-<property name="status"    column="status"      type="int"    description="状态"   />
-</entity>
