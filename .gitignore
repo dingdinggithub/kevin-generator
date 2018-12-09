@@ -19,7 +19,7 @@ hs_err_pid*
 *.iml
 
 build/
-target/
+target/*
 
 *.swp
 *.DS_STORE
